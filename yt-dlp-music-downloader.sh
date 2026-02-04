@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
-set -e
-
 while true; do
-  echo
-  read -rp "Enter download path: " DOWNLOAD_PATH
-  read -rp "Enter playlist URL: " PLAYLIST_URL
+  read -p "Enter download path: " DOWNLOAD_PATH
+  read -p "Enter playlist URL: " PLAYLIST_URL
 
-  echo
   echo "You entered:"
   echo "  Path: $DOWNLOAD_PATH"
   echo "  URL : $PLAYLIST_URL"
   echo
-  read -rp "Is this correct? (y/n): " CONFIRM
+  read -p "Is this correct? (y/n): " CONFIRM
 
   case "$CONFIRM" in
     y|Y)
@@ -39,5 +35,4 @@ yt-dlp \
   --download-archive "$DOWNLOAD_PATH/.downloaded.txt" \
   --ignore-errors \
   "$PLAYLIST_URL"
-
 exit
