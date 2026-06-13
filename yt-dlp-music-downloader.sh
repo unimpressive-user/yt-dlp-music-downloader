@@ -35,4 +35,4 @@ yt-dlp \
   --download-archive "$DOWNLOAD_PATH/.downloaded.txt" \
   --ignore-errors \
   "$PLAYLIST_URL"
-exit
+exit 1
