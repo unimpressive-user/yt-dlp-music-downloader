@@ -33,4 +33,4 @@ yt-dlp \
   --paths "$DOWNLOAD_PATH" \
   --download-archive "$DOWNLOAD_PATH/.downloaded.txt" \
   "$PLAYLIST_URL"
-exit
+exit 1
